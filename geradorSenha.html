@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="geradorSenha.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Gerador senha</title>
+</head>
+
+<body>
+    <main>
+        <section class="desc-top">
+            <h1 class="titulo">Gerador de senha</h1>
+            <p class="sub-titulo">Gerador de senha online que gera senhas fortes e seguras!!</p>
+        </section>
+        <section class="box">
+            <div class="senha">
+                <div class="texto">
+                    <input class="" type="text" name="senha" id="senha" value="**********">
+                </div>
+                <div class="botoes">
+                    <button id="btn-copiar-senha">
+                        <img src="images/copy.svg" alt="copiar" width="42">
+                    </button>
+                    <button id="refazer" class="refazer">
+                        <img src="images/renew.svg" alt="refazer" width="42">
+                    </button>
+                </div>
+            </div>
+            <div class="box-seguranca">
+                <div id="barra-seguranca" class="barra">
+                </div>
+            </div>
+        </section>
+
+        <section class="box costomizado">
+            <h3 class="titulo">Personalizar</h3>
+            <div class="acao">
+                <div class="senha-tamanho">
+                    <p>Tamanho: <span id="tamanho-senha-texto">10</span></p>
+                    <input type="range" name="senha-tamanho" class="slider" id="senha-tamanho" value="10" min="8"
+                        max="64" />
+                </div>
+                <div class="config">
+                    <label class="box-checkbox">
+                        <span class="text">Maiusculas</span>
+                        <input type="checkbox" id="uppercase-check" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="box-checkbox">
+                        <span class="text">Numeros</span>
+                        <input type="checkbox" id="numero-check" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="box-checkbox">
+                        <span class="text">Simbolos</span>
+                        <input type="checkbox" id="simbolo-check" checked>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+        </section>
+        <div class="btns">
+            <button onclick="geraSenha()">Gerar Senha</button>
+            <button id="btnsalvar-senha">Salvar Senha</button>
+        </div>
+        <section class="tabela-senhas">
+            <table id="lista-senhas" border="1">
+                <tr>
+                  <th>id</th>
+                  <th>Descricao senha</th>
+                  <th>Senha</th>
+                </tr>
+              </table>
+        </section>
+    </main>
+</body>
+
+
+
+
+

@@ -1,0 +1,286 @@
+body {
+    background-color: #f8fafd;
+    font-family: "Inter", sans-serif;
+    color: #252525;
+    padding: 2rem;
+}
+
+main {
+    max-height: 780px;
+    margin: 0px auto;
+}
+
+.desc-top {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.desc-top .titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+}
+
+.desc-top .sub-titulo {
+    font-size: 1.125rem;
+    color: #828282;
+}
+
+.box {
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(132, 148, 165, 0.9);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+.senha {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.senha .texto {
+    flex: 1;
+}
+
+.senha .texto input {
+    font-family: "Inconsolata", serif;
+    font-size: 3.2rem;
+    border: none;
+    outline: none;
+    height: 52px;
+    width: 100%;
+    transition: all 0.2;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.senha .texto input.font-grande{
+    font-size: 2.8rem;
+}
+
+.senha .texto input.font-media{
+    font-size: 2.4rem;
+}
+
+.senha .texto input.font-pequena{
+    font-size: 2rem;
+}
+
+.senha .botoes{
+    text-align: center;
+}
+
+.senha .botoes button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.box-seguranca {
+    height: 10px;
+    background-color: #ddd;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.box-seguranca .barra {
+    height: 10px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    transition: all 0.2s;
+}
+
+.box-seguranca .barra.completo {
+    border-top-right-radius: 0;
+}
+
+.box-seguranca .barra.seguro {
+    background-color: #27ae60;
+}
+
+.box-seguranca .barra.atencao {
+    background-color: #f2c94c;
+}
+
+.box-seguranca .barra.perigo {
+    background-color: #eb5757;
+}
+
+.costomizado {
+    padding: 1rem 1.5rem;
+}
+
+.costomizado .titulo{
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75;
+}
+
+.costomizado .acao{
+    display: flex;
+    gap: 3rem;
+    color: #828282;
+}
+
+.costomizado .senha-tamanho{
+    flex: 1;
+}
+
+.costomizado .senha-tamanho .slider{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 10px;
+    background: #dddddd;
+    border-radius: 8px;
+    width: 100%;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    margin-top: 1rem;
+}
+
+.costomizado .senha-tamanho .slider:hover {
+    opacity: 1;
+}
+
+.costomizado .senha-tamanho .slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: #e57206;
+    cursor: pointer;
+}
+
+.box-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.box-checkbox input {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.box-checkbox .checkmark {
+    position: absolute;
+    background-color: #dddddd;
+    height: 25px;
+    width: 25px;
+    top: 0;
+    left: 0;
+    transition: all 0.2s;
+}
+
+.box-checkbox:hover input ~ .checkmark {
+    background-color: #cccccc;
+}
+
+.box-checkbox input:checked ~ .checkmark {
+    background-color: #e57206;
+}
+
+.box-checkbox .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 5px;
+    height: 13px;
+    border: solid white;
+    left: 9px;
+    top: 5px;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.box-checkbox input:checked ~ .checkmark::after{
+    display: block;
+}
+
+.btns {
+    text-align: center;
+}
+
+.btns button {
+    background-color: #e57206;
+    font-size: 1.375rem;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    transition: all 0.2s;
+    margin: 0 25px;
+}
+
+.btns button:hover {
+    background-color: #dfab7a;
+}
+
+.refazer {
+    position: relative;
+    width: 42px;
+}
+
+.refazer img{
+    display: none;
+}
+
+.refazer::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 42px;
+    height: 42px;
+    background-image: url('../images/renew.svg');
+    background-size: cover;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+@keyframes girar {
+    to {
+        transform: translate(-50%, -50%) rotate(100deg); /* Rotação completa de 360 graus */
+    }
+}
+
+.refazer.clicked::before {
+    animation: girar 1s linear forwards;
+}
+
+
+.tabela-senhas table {
+    width: 100%;
+}
+
+.centraliza-celula{
+    text-align: center;
+}
+
+.btns {
+    margin-bottom: 3rem;
+}
+
+
+
+
+
+
+
